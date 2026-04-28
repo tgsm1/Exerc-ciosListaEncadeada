@@ -1,9 +1,32 @@
-public class No<T> {
-    T valor;
-    No<T> proximo;
+import java.util.LinkedList;
 
-    public No(T valor) {
-        this.valor = valor;
-        this.proximo = null;
+class Aluno {
+    String nome;
+    String matricula;
+
+    Aluno(String nome, String matricula) {
+        this.nome = nome;
+        this.matricula = matricula;
+    }
+
+    public String toString() {
+        return nome + " - " + matricula;
+    }
+}
+
+public class Ex1 {
+    public static void main(String[] args) {
+        LinkedList<Aluno> lista = new LinkedList<>();
+
+        lista.add(new Aluno("Ana", "001"));
+        lista.add(new Aluno("Bruno", "002"));
+        lista.add(new Aluno("Carlos", "003"));
+        lista.add(new Aluno("Diana", "004"));
+        lista.add(new Aluno("Eduardo", "005"));
+
+        System.out.println(lista);
+        System.out.println("Primeiro: " + lista.getFirst());
+        System.out.println("Último: " + lista.getLast());
+        System.out.println("Total: " + lista.size());
     }
 }
