@@ -1,0 +1,32 @@
+import java.util.LinkedList;
+
+class Livro {
+    String titulo, autor;
+    int ano;
+
+    Livro(String t, String a, int ano) {
+        titulo = t;
+        autor = a;
+        this.ano = ano;
+    }
+
+    public String toString() {
+        return titulo + " - " + autor + " (" + ano + ")";
+    }
+}
+
+public class Ex4 {
+    public static void main(String[] args) {
+        LinkedList<Livro> lista = new LinkedList<>();
+
+        lista.add(new Livro("Livro1", "Autor1", 2000));
+        lista.add(new Livro("Livro2", "Autor2", 2001));
+        lista.add(new Livro("Livro3", "Autor3", 2002));
+        lista.add(new Livro("Livro4", "Autor4", 2003));
+        lista.add(new Livro("Livro5", "Autor5", 2004));
+
+        System.out.println(lista);
+        System.out.println("Primeiro: " + lista.getFirst());
+        System.out.println("Último: " + lista.getLast());
+    }
+}
