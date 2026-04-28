@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+
+class Carro {
+    String placa, modelo;
+
+    Carro(String p, String m) {
+        placa = p;
+        modelo = m;
+    }
+
+    public String toString() {
+        return placa + " - " + modelo;
+    }
+}
+
+public class Ex10 {
+    public static void main(String[] args) {
+        LinkedList<Carro> lista = new LinkedList<>();
+
+        for (int i = 1; i <= 5; i++)
+            lista.add(new Carro("ABC" + i, "Modelo" + i));
+
+        System.out.println(lista);
+        System.out.println("Contém ABC3? " + lista.toString().contains("ABC3"));
+        System.out.println("Primeiro: " + lista.getFirst());
+        System.out.println("Último: " + lista.getLast());
+    }
+}
