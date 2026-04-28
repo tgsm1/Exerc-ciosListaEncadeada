@@ -1,0 +1,29 @@
+import java.util.LinkedList;
+
+class Disciplina {
+    String nome;
+    double nota;
+
+    Disciplina(String n, double nota) {
+        nome = n;
+        this.nota = nota;
+    }
+
+    public String toString() {
+        return nome + " - " + nota;
+    }
+}
+
+public class Ex9 {
+    public static void main(String[] args) {
+        LinkedList<Disciplina> lista = new LinkedList<>();
+
+        for (int i = 1; i <= 5; i++)
+            lista.add(new Disciplina("Disciplina" + i, i * 2));
+
+        System.out.println(lista);
+        System.out.println("Posição 2: " + lista.get(2));
+        System.out.println("Contém Disciplina3? " + lista.toString().contains("Disciplina3"));
+        System.out.println("Total: " + lista.size());
+    }
+}
