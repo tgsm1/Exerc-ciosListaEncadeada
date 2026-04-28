@@ -1,0 +1,32 @@
+import java.util.LinkedList;
+
+class Produto {
+    String nome;
+    double preco;
+    int quantidade;
+
+    Produto(String n, double p, int q) {
+        nome = n;
+        preco = p;
+        quantidade = q;
+    }
+
+    public String toString() {
+        return nome + " - R$" + preco + " - " + quantidade;
+    }
+}
+
+public class Ex7 {
+    public static void main(String[] args) {
+        LinkedList<Produto> lista = new LinkedList<>();
+
+        for (int i = 1; i <= 5; i++)
+            lista.add(new Produto("Produto" + i, i * 10, i));
+
+        System.out.println(lista);
+        System.out.println("Posição 2: " + lista.get(2));
+        System.out.println("Contém Produto3? " + lista.toString().contains("Produto3"));
+        System.out.println("Primeiro: " + lista.getFirst());
+        System.out.println("Último: " + lista.getLast());
+    }
+}
