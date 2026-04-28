@@ -1,0 +1,28 @@
+import java.util.LinkedList;
+
+class Pagina {
+    String titulo, url;
+
+    Pagina(String t, String u) {
+        titulo = t;
+        url = u;
+    }
+
+    public String toString() {
+        return titulo + " - " + url;
+    }
+}
+
+public class Ex5 {
+    public static void main(String[] args) {
+        LinkedList<Pagina> lista = new LinkedList<>();
+
+        for (int i = 1; i <= 8; i++)
+            lista.add(new Pagina("Pagina" + i, "site" + i + ".com"));
+
+        System.out.println(lista);
+        System.out.println("Visitou Pagina5? " + lista.toString().contains("Pagina5"));
+        System.out.println("Última: " + lista.getLast());
+        System.out.println("Total: " + lista.size());
+    }
+}
