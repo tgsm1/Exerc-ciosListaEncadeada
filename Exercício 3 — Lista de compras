@@ -1,0 +1,34 @@
+import java.util.LinkedList;
+
+class Item {
+    String nome;
+    int quantidade;
+
+    Item(String n, int q) {
+        nome = n;
+        quantidade = q;
+    }
+
+    public String toString() {
+        return nome + " - " + quantidade;
+    }
+}
+
+public class Ex3 {
+    public static void main(String[] args) {
+        LinkedList<Item> lista = new LinkedList<>();
+
+        lista.add(new Item("Arroz", 2));
+        lista.add(new Item("Feijão", 1));
+        lista.add(new Item("Leite", 3));
+        lista.add(new Item("Pão", 5));
+        lista.add(new Item("Carne", 2));
+        lista.add(new Item("Ovos", 12));
+        lista.add(new Item("Café", 1));
+
+        System.out.println(lista);
+        System.out.println("Item posição 3: " + lista.get(3));
+        System.out.println("Contém Leite? " + lista.toString().contains("Leite"));
+        System.out.println("Total: " + lista.size());
+    }
+}
