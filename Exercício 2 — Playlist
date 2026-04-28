@@ -1,0 +1,31 @@
+import java.util.LinkedList;
+
+class Musica {
+    String titulo, artista;
+
+    Musica(String t, String a) {
+        titulo = t;
+        artista = a;
+    }
+
+    public String toString() {
+        return titulo + " - " + artista;
+    }
+}
+
+public class Ex2 {
+    public static void main(String[] args) {
+        LinkedList<Musica> lista = new LinkedList<>();
+
+        lista.add(new Musica("Musica1", "Artista1"));
+        lista.add(new Musica("Musica2", "Artista2"));
+        lista.add(new Musica("Musica3", "Artista3"));
+        lista.add(new Musica("Musica4", "Artista4"));
+        lista.add(new Musica("Musica5", "Artista5"));
+        lista.add(new Musica("Musica6", "Artista6"));
+
+        System.out.println(lista);
+        System.out.println("Contém Musica3? " + lista.contains(lista.get(2)));
+        System.out.println("Total: " + lista.size());
+    }
+}
